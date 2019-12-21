@@ -2,7 +2,7 @@
 	 * Given a list of numbers and a number k, return whether any two numbers from
 	 * the list add up to k.
 	 */
-
+public class Day1 {
 	static boolean isTargetSumPair(int[] arr, int k) {
 		if (arr == null)
 			return false;
@@ -21,16 +21,9 @@
 		}
 		return false;
 	}
-
-
-package day1;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
+}
 
 class Day1Test {
-
 	@Test
 	void testNullArray() {
 		assertFalse(Day1.isTargetSumPair(null, 0));
@@ -51,5 +44,4 @@ class Day1Test {
 		assertFalse(Day1.isTargetSumPair(arr, 11));
 		assertFalse(Day1.isTargetSumPair(arr, 16));
 	}
-
 }
