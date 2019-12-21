@@ -21,3 +21,35 @@
 		}
 		return false;
 	}
+
+
+package day1;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Day1Test {
+
+	@Test
+	void testNullArray() {
+		assertFalse(Day1.isTargetSumPair(null, 0));
+	}
+
+	@Test
+	void testSumExists() {
+		int[] arr = { 10, 15, 3, 7 };
+		assertTrue(Day1.isTargetSumPair(arr, 10));
+		assertTrue(Day1.isTargetSumPair(arr, 13));
+		assertTrue(Day1.isTargetSumPair(arr, 18));
+	}
+
+	@Test
+	void testSumNotExists() {
+		int[] arr = { 10, 15, 3, 7 };
+		assertFalse(Day1.isTargetSumPair(arr, 12));
+		assertFalse(Day1.isTargetSumPair(arr, 11));
+		assertFalse(Day1.isTargetSumPair(arr, 16));
+	}
+
+}
